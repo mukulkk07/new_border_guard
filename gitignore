@@ -1,0 +1,44 @@
+# Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.egg-info/
+.Python
+build/
+develop-eggs/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Project
+repo_status.json
+repo_status.txt
+*.log
+*.tmp
+.cache/
+
+# LaTeX
+*.aux
+*.toc
+*.out
+*.lof
+*.lot
+*.fdb_latexmk
+*.fls
+*.synctex.gz

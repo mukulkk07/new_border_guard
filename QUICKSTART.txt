@@ -1,0 +1,174 @@
+# Quick Start Guide
+
+## 5-Minute Setup
+
+```bash
+# 1. Run setup wizard
+python setup.py
+
+# 2. Follow prompts (enter GitHub username, token, repo name)
+
+# 3. Activate environment
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+
+# 4. Test installation
+python github_monitor.py
+
+# Done! ✓
+```
+
+## Which Tool to Use?
+
+### I want to push changes quickly
+```bash
+python github_pusher.py
+```
+
+### I want an interactive menu
+```bash
+python github_manager.py
+```
+
+### I want to build LaTeX and push
+```bash
+python docs_pusher.py
+```
+
+### I want to check status
+```bash
+python github_monitor.py
+```
+
+## Common Commands
+
+```bash
+# Check repository status
+python github_monitor.py
+
+# Auto push with defaults
+python github_pusher.py
+
+# Interactive menu (11 options)
+python github_manager.py
+
+# Build and push LaTeX docs
+python docs_pusher.py
+
+# Create new token
+# Go to: https://github.com/settings/tokens
+```
+
+## File Locations
+
+**Your files should be in:**
+```
+github-automation/
+├── github_pusher.py
+├── github_manager.py
+├── docs_pusher.py
+├── github_monitor.py
+├── setup.py
+├── requirements.txt
+├── .gitignore
+├── .env (created by setup)
+└── README.md
+```
+
+## Push to GitHub
+
+```bash
+# 1. Extract all 10 files (if not done)
+# 2. Go to your local directory
+cd github-automation
+
+# 3. Create GitHub repo (online first)
+# https://github.com/new
+
+# 4. Initialize Git
+git init
+git add .
+git commit -m "Add GitHub automation tools v1.0"
+git remote add origin https://github.com/USERNAME/REPO.git
+git branch -M main
+git push -u origin main
+
+# Done! Repository synced ✓
+```
+
+## Get GitHub Token
+
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Select these scopes:
+   - ✓ repo
+   - ✓ user (optional)
+4. Copy token
+5. Paste in setup.py prompt
+
+**Token format:** `ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+
+## Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| Module not found | `source venv/bin/activate && pip install -r requirements.txt` |
+| .env missing | `python setup.py` |
+| Git not found | Install Git from git-scm.com |
+| pdflatex not found | Install TeX Live (for docs_pusher.py) |
+| Permission denied | `chmod +x *.py` (Linux/macOS) |
+
+## Your Files
+
+✅ **PUSH THESE 10:**
+- github_pusher.py
+- github_manager.py
+- docs_pusher.py
+- github_monitor.py
+- setup.py
+- requirements.txt
+- .gitignore
+- README.md
+- QUICKSTART.txt
+- HOW_TO_DOWNLOAD.txt
+
+❌ **DO NOT PUSH:**
+- .env (contains token!)
+
+## Next Steps
+
+1. ✅ Extract all files
+2. ✅ Run `python setup.py`
+3. ✅ Test with `python github_monitor.py`
+4. ✅ Push to GitHub
+
+## Quick Reference
+
+```bash
+# Activate venv
+source venv/bin/activate
+
+# Deactivate venv
+deactivate
+
+# Install missing package
+pip install <package-name>
+
+# Check status
+git status
+
+# View commits
+git log --oneline -5
+
+# Create branch
+git checkout -b <branch-name>
+```
+
+## Need Help?
+
+- See README.md (detailed guide)
+- Check code docstrings
+- Review .env.example
+- Test with github_monitor.py first
+
+**You're ready!** 🚀
